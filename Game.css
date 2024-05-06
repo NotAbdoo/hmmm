@@ -1,0 +1,64 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#game {
+  margin: 50px;
+  width: 1000px;
+  height: 300px;
+  border: 5px solid green;
+  background-image: url('download.webp');
+  background-size: 100% 110%;
+
+  overflow: hidden;
+}
+
+#Hero {
+  width: 30px;
+  height: 50px;
+  position: relative;
+  top: 250px;
+  background-image: url('Hero.png');
+  background-size: 100% 100%;
+}
+
+.animate {
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0% {
+    top: 250px;
+  }
+
+  55% {
+    top: 170px;
+  }
+
+  100% {
+    top: 250px;
+  }
+}
+
+@keyframes obstacle {
+  0% {
+    left: 900px;
+  }
+
+  100% {
+    left: -100px;
+  }
+
+}
+
+#Evil {
+  width: 100px;
+  height: 50px;
+  background-image: url('Evil.png');
+  background-size: 100% 100%;
+  position: relative;
+  top: 200px;
+  left: 900px;
+  animation: obstacle 2s infinite linear;
+}
